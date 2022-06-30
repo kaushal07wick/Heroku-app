@@ -33,7 +33,7 @@ Link to the website
 [Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
 
 Screenshot of the website
-![Heroku-Streamlit-app](image.jpg)
+![Heroku-Streamlit-app](ss.jpg)
 
 *Thanks*
 
