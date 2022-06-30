@@ -12,20 +12,15 @@ st.write("""
 This is a Flight price prediction web-app, developed by Kaushal Choudhary.
 It predicts the prices of flight, based on the five inputs provided by you. It's prediction model is based on 
 lightGBM machine learning model, which has been trained on 3 million+ historic flight prices data.
-
-In the sidebar , input feature is provided, please provide with data you like.
-Don't forget to press the predict button , to predict you flight prices.
-Thanks.
 """)
-st.sidebar.header('User Input')
 dict1 = {'B': 0, 'E': 1 ,'PE': 2}
 dict2 = {'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }
 
-Cabin = st.sidebar.radio('Cabin Type', ({'B': 0, 'E': 1 ,'PE': 2}))
-Dept_city = st.sidebar.selectbox('Departure City',({'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }))
-Dept_date = st.sidebar.date_input("Departure Date", dt.date(2022, 6, 24))
-arrival_city = st.sidebar.selectbox('Arrival City',({'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }))   
-dept_hours = st.sidebar.selectbox('Departure Hours',(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23)) 
+Cabin = st.sidebar.radio('Class', ({'B': 0, 'E': 1 ,'PE': 2}))
+Dept_city = st.sidebar.selectbox('From',({'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }))
+arrival_city = st.sidebar.selectbox('To',({'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }))   
+Dept_date = st.sidebar.date_input("Date of Journey", dt.date(2022, 6, 24))
+dept_hours = st.sidebar.selectbox('Time (in Hours)',(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23)) 
     
 #displaying the essentials
 if st.sidebar.button('Submit'):
