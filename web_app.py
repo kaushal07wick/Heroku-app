@@ -21,7 +21,8 @@ Dept_city = st.sidebar.selectbox('From',({'Amritsar' : 0, 'Bagdogra' : 1, 'Benga
 arrival_city = st.sidebar.selectbox('To',({'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }))   
 Dept_date = st.sidebar.date_input("Date of Journey", dt.date(2022, 6, 24))
 dept_hours = st.sidebar.selectbox('Time (in Hours)',(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23)) 
-    
+traveller = st.sidebar.selectbox('Number of travellers',(1, 2 ,3 ,4, 5, 6, 7, 8, 9, 10))  
+
 #displaying the essentials
 if st.sidebar.button('Submit'):
     pass
@@ -48,7 +49,7 @@ if st.button('Predict'):
      st.write('Predicting')
      # Apply model to make predictions
      prediction = load_clf.predict(data.reshape(1,-1).astype(float))
-     st.write('Price', prediction)
+     st.write('Price', (traveller*prediction))
 else:
     st.write('Please click on this button to predict')
 
