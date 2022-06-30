@@ -1,5 +1,4 @@
 # Flight-price-prediction-app
-https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white https://img.shields.io/badge/sublime_text-%23575757.svg?&style=for-the-badge&logo=sublime-text&logoColor=important https://img.shields.io/badge/Maintained%3F-yes-green.svg
 
 **Deployed Machine learning model(lightGBM) with an accuracy of over 87% for flight price prediction**.
 It takes 5 inputs from the user 
@@ -20,7 +19,7 @@ The model has been trained with a dataset having *14 attributes* and over *3 mil
 The model took only five parameters , same as input parameters, for final training as according to 
 feature importance map, only these *5 parameters* were found to useful .
 
-# Model https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252
+# Model
 The model *LightGBM* is decision **tree based regression model** , optimized with a gradient boosting method to enhance performance.
 The model used adam_optimizer as learning parameter* and `learning_rate=0.01`.
 It had *20,000 estimators*.
@@ -33,8 +32,6 @@ We used mean_squared_error and mean_absolute_error for final evaluation of the m
 **Link to the website**
 
 [Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
-
-https://img.shields.io/website-up-down-green-red/http/monip.org.svg website:(https://sleepy-ocean-41264.herokuapp.com)
 
 **Screenshot of the website**
 
