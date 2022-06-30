@@ -10,7 +10,7 @@ It takes 5 inputs from the user
 
 **The output of the model is float point value of flight Price upto 4 decimal places**.
 
-*Note : The internal model is based on a *optimal_time parameter* , which assumes that time of booking the flight is 4 hours before departure.
+**Note :** The internal model is based on a `optimal_time` parameter , which assumes that time of booking the flight is 4 hours before departure.
 So, according to model, the cheapest flight prices are 4 hours before actual flight takeoff. 
 Please book your flights accordingly.
 
@@ -33,7 +33,7 @@ Link to the website
 [Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
 
 Screenshot of the website
-
+![Heroku-Streamlit-app](image.jpg)
 
 *Thanks*
 
