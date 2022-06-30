@@ -29,15 +29,17 @@ It had an evaluation_metric as `eval_metric=rmse`.
 # Evaluation
 We used mean_squared_error and mean_absolute_error for final evaluation of the model.
 
-Link to the website
+**Link to the website**
+
 [Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
 
-Screenshot of the website
+**Screenshot of the website**
+
 ![Heroku-Streamlit-app](ss.jpg)
 
 *Thanks*
 
-**This project was the final part of Data Analyst Internship at Technocolabs Softwares India.** 
+**This project was the final part of Data Analyst Internship at Technocolabs Softwares Inc. ** 
 
 *Please, feel free to fork this repo and tinker with the code.*
 
