@@ -2,7 +2,7 @@
 
 **Deployed Machine learning model(lightGBM) with an accuracy of over 87% for flight price prediction**.
 It takes 5 inputs from the user 
-1. *Cabin* (Cabin type)
+1. `code` (Cabin type)
 2. *Departure City* (Departure city / city where flight is to be taken)
 3. *Departure Date* (the date of flight )
 4. *Arrival City* (city where flight has to land)
@@ -28,6 +28,9 @@ It had an evaluation_metric as *rmse (root mean square error)*.
 
 # Evaluation
 We used mean_squared_error and mean_absolute_error for final evaluation of the model.
+
+[Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
+
 
 *Thanks*
 
