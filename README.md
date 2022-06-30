@@ -2,11 +2,11 @@
 
 **Deployed Machine learning model(lightGBM) with an accuracy of over 87% for flight price prediction**.
 It takes 5 inputs from the user 
-1. `code` (Cabin type)
-2. *Departure City* (Departure city / city where flight is to be taken)
-3. *Departure Date* (the date of flight )
-4. *Arrival City* (city where flight has to land)
-5. *Departure hours* (the approximate integer/ nearest integer to flight departure timing)
+1. `Cabin` (Cabin type)
+2. `Dept_city` (Departure city / city where flight is to be taken)
+3. `Dept_date` (the date of flight )
+4. `arrival_city` (city where flight has to land)
+5. `Dept_hours` (the approximate integer/ nearest integer to flight departure timing)
 
 **The output of the model is float point value of flight Price upto 4 decimal places**.
 
@@ -20,16 +20,19 @@ The model took only five parameters , same as input parameters, for final traini
 feature importance map, only these *5 parameters* were found to useful .
 
 # Model
-The model *LightGBM* is decision tree based model, optimized with a gradient boosting method to enhance performance.
-The model used adam_optimizer as learning parameter and learning_rate was *0.01*.
+The model *LightGBM* is decision **tree based regression model** , optimized with a gradient boosting method to enhance performance.
+The model used adam_optimizer as learning parameter* and `learning_rate=0.01`.
 It had *20,000 estimators*.
-The *max_depth* parameter of decision tree was set to *8*.
-It had an evaluation_metric as *rmse (root mean square error)*.
+The *max_depth* parameter of decision tree was set to `max_depth=8`.
+It had an evaluation_metric as `eval_metric=rmse`.
 
 # Evaluation
 We used mean_squared_error and mean_absolute_error for final evaluation of the model.
 
+Link to the website
 [Heroku-app](https://sleepy-ocean-41264.herokuapp.com/)
+
+Screenshot of the website
 
 
 *Thanks*
@@ -38,5 +41,5 @@ We used mean_squared_error and mean_absolute_error for final evaluation of the m
 
 *Please, feel free to fork this repo and tinker with the code.*
 
-*Don't forget to give a star to this repo, if you liked it :)*
+*Don't forget to give a star to this repo, if you liked it* `:)`
 
