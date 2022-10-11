@@ -11,7 +11,7 @@ st.header("Cheapest flight price prediction")
 st.write("""
 This is a Flight price prediction web-app, developed by Kaushal Choudhary.
 It predicts the prices of flight, based on the five inputs provided by you. It's prediction model is based on 
-lightGBM machine learning model, which has been trained on 3 million+ historic flight prices data.
+lightGBM machine learning model, which has been trained on 10 million+ historic flight prices data.
 """)
 dict1 = {'B': 0, 'E': 1 ,'PE': 2}
 dict2 = {'Amritsar' : 0, 'Bagdogra' : 1, 'Bengaluru' : 2, 'Bhubaneswar' : 3 , 'Chandigarh':4 , 'Chennai' :5 , 'Coimbatore':6 , 'Goa' : 7 , 'Guwahati' : 8, 'Hyderabad' : 9, 'Indore' : 10 , 'Jaipur' : 11 , 'Kochi' : 12  , 'Kolkata' : 13 , 'Kozhikode' :14 , 'Lucknow':15 , 'Mangalore':16 , 'Mumbai':17 , 'Nagpur' :18 , 'New Delhi':19 , 'Patna':20 , 'Port Blair' :21 , 'Pune': 22 , 'Raipur': 23 , 'Ranchi':24 , 'Srinagar': 25 , 'Thiruvananthapuram' : 26 ,'Tiruchirappalli' :27 ,'Varanasi' : 28 , 'Visakhapatnam': 29 }
